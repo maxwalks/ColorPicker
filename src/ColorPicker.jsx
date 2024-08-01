@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import styles from './ColorPicker.module.css'
 
 function ColorPicker () {
-    const [color, setColor] = useState("#000000")
+    const [color, setColor] = useState("#FFFFFF")
 
     function onColorChange (e) {
         setColor(e.target.value)
@@ -13,7 +13,6 @@ function ColorPicker () {
     }, [color])
     return (
         <>
-            <div className={styles.background} style={{ backgroundColor: color }}></div>
             <div className={styles.colorInput}>
                 <input type="color" onChange={onColorChange} value={color}/>
                 <div className={styles.info}>
